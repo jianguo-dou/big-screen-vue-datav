@@ -6,13 +6,13 @@
           <icon name="chart-bar" class="text-icon"></icon>
         </span>
         <div class="d-flex">
-          <span class="fs-xl text mx-2">任务通过率</span>
+          <span class="fs-xl text mx-2">环境检测</span>
           <dv-decoration-3 class="dv-dec-3" />
         </div>
       </div>
-      <div class="d-flex jc-center">
-        <CenterLeft1Chart />
-      </div>
+<!--      <div class="d-flex jc-center">-->
+<!--        <CenterLeft1Chart />-->
+<!--      </div>-->
       <!-- 4个主要的数据 -->
       <div class="bottom-data">
         <div
@@ -21,13 +21,11 @@
           :key="index"
         >
           <div class="d-flex">
-            <span class="coin">￥</span>
+            <p class="text" style="text-align: center;">
+              {{ item.text }}
+            </p>
             <dv-digital-flop class="dv-digital-flop" :config="item.number" />
           </div>
-          <p class="text" style="text-align: center;">
-            {{ item.text }}
-            <span class="colorYellow">(件)</span>
-          </p>
         </div>
       </div>
     </div>
@@ -35,7 +33,7 @@
 </template>
 
 <script>
-import CenterLeft1Chart from '@/components/echart/centerLeft/centerLeft1Chart'
+// import CenterLeft1Chart from '@/components/echart/centerLeft/centerLeft1Chart'
 export default {
   data() {
     return {
@@ -44,56 +42,56 @@ export default {
           number: {
             number: [15],
             toFixed: 1,
-            textAlign: 'left',
+            textAlign: 'right',
             content: '{nt}',
             style: {
               fontSize: 24
             }
           },
-          text: '今日构建总量'
+          text: '天气'
         },
         {
           number: {
             number: [1144],
             toFixed: 1,
-            textAlign: 'left',
+            textAlign: 'right',
             content: '{nt}',
             style: {
               fontSize: 24
             }
           },
-          text: '总共完成数量'
+          text: '温度'
         },
         {
           number: {
             number: [361],
             toFixed: 1,
-            textAlign: 'left',
+            textAlign: 'right',
             content: '{nt}',
             style: {
               fontSize: 24
             }
           },
-          text: '正在编译数量'
+          text: '湿度'
         },
         {
           number: {
             number: [157],
             toFixed: 1,
-            textAlign: 'left',
+            textAlign: 'right',
             content: '{nt}',
             style: {
               fontSize: 24
             }
           },
-          text: '未通过数量'
+          text: '风速'
         }
       ]
     }
   },
-  components: {
-    CenterLeft1Chart
-  },
+  // components: {
+  //   CenterLeft1Chart
+  // },
   mounted() {
     this.changeTiming()
   },
@@ -141,10 +139,10 @@ $box-height: 410px;
       & > div {
         padding-right: 5px;
       }
-      font-size: 14px;
+      font-size: 20px;
       float: right;
       position: relative;
-      width: 50%;
+      width: 100%;
       color: #d3d6dd;
       .dv-digital-flop {
         width: 120px;
