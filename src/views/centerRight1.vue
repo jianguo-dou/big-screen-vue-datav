@@ -53,7 +53,7 @@ export default {
 
 <style lang="scss" scoped>
 $box-height: 410px;
-$box-width: 300px;
+$box-width: 100%;
 #centerRight1 {
   padding: 16px;
   padding-top: 20px;
@@ -71,7 +71,7 @@ $box-width: 300px;
     border-radius: 10px;
     overflow: hidden;
     .dv-scr-board {
-      width: 270px;
+      width: 470px;
       height: 340px;
     }
   }

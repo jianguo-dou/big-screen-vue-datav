@@ -67,9 +67,9 @@
               <center />
             </div>
             <!-- 中间 -->
-            <div>
-              <centerRight2 />
-            </div>
+<!--            <div>-->
+<!--              <centerRight2 />-->
+<!--            </div>-->
             <div>
               <dv-border-box-13>
                 <centerRight1 />
@@ -98,7 +98,7 @@ import { formatTime } from '../utils/index.js'
 import centerLeft1 from './centerLeft1'
 import centerLeft2 from './centerLeft2'
 import centerRight1 from './centerRight1'
-import centerRight2 from './centerRight2'
+// import centerRight2 from './centerRight2'
 import center from './center'
 import bottomLeft from './bottomLeft'
 import bottomRight from './bottomRight'
@@ -119,7 +119,7 @@ export default {
     centerLeft1,
     centerLeft2,
     centerRight1,
-    centerRight2,
+    // centerRight2,
     center,
     bottomLeft,
     bottomRight
