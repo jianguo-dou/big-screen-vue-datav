@@ -7,24 +7,36 @@
         </span>
         <div class="d-flex">
           <span class="fs-xl text mx-2">环境检测</span>
-          <dv-decoration-3 class="dv-dec-3" />
+          <dv-decoration-3 class="dv-dec-3"/>
         </div>
       </div>
-<!--      <div class="d-flex jc-center">-->
-<!--        <CenterLeft1Chart />-->
-<!--      </div>-->
+      <!--      <div class="d-flex jc-center">-->
+      <!--        <CenterLeft1Chart />-->
+      <!--      </div>-->
       <!-- 4个主要的数据 -->
       <div class="bottom-data">
         <div
-          class="item-box mt-2"
-          v-for="(item, index) in numberData"
-          :key="index"
+            class="item-box mt-2"
+            v-for="(item, index) in textData"
+            :key="index"
         >
           <div class="d-flex">
             <p class="text" style="text-align: center;">
               {{ item.text }}
             </p>
-            <dv-digital-flop class="dv-digital-flop" :config="item.number" />
+            <dv-digital-flop class="dv-digital-flop" :config="item.content"/>
+          </div>
+        </div>
+        <div
+            class="item-box mt-2"
+            v-for="(item, index) in numberData"
+            :key="index"
+        >
+          <div class="d-flex">
+            <p class="text" style="text-align: center;">
+              {{ item.text }}
+            </p>
+            <dv-digital-flop class="dv-digital-flop" :config="item.number"/>
           </div>
         </div>
       </div>
@@ -37,19 +49,33 @@
 export default {
   data() {
     return {
-      numberData: [
+      textData: [
         {
-          number: {
-            number: [15],
+          content: {
+            content: '晴',
             toFixed: 1,
             textAlign: 'right',
-            content: '{nt}',
+            // content: '{nt}',
             style: {
               fontSize: 24
             }
           },
           text: '天气'
-        },
+        }
+      ],
+      numberData: [
+        // {
+        //   number: {
+        //     number: [0],
+        //     toFixed: 1,
+        //     textAlign: 'right',
+        //     content: '{nt}',
+        //     style: {
+        //       fontSize: 24
+        //     }
+        //   },
+        //   text: '天气'
+        // },
         {
           number: {
             number: [1144],
@@ -104,7 +130,7 @@ export default {
     changeNumber() {
       this.numberData.forEach((item, index) => {
         item.number.number[0] += ++index
-        item.number = { ...item.number }
+        item.number = {...item.number}
       })
     }
   }
@@ -120,13 +146,16 @@ $box-height: 410px;
   height: $box-height;
   width: $box-width;
   border-radius: 10px;
+
   .bg-color-black {
     height: $box-height - 30px;
     border-radius: 10px;
   }
+
   .text {
     color: #c3cbde;
   }
+
   .dv-dec-3 {
     position: relative;
     width: 100px;
@@ -139,15 +168,18 @@ $box-height: 410px;
       & > div {
         padding-right: 5px;
       }
+
       font-size: 20px;
       float: right;
       position: relative;
       width: 100%;
       color: #d3d6dd;
+
       .dv-digital-flop {
         width: 120px;
         height: 30px;
       }
+
       // 金币
       .coin {
         position: relative;
@@ -155,9 +187,11 @@ $box-height: 410px;
         font-size: 20px;
         color: #ffc107;
       }
+
       .colorYellow {
         color: yellowgreen;
       }
+
       p {
         text-align: center;
       }
