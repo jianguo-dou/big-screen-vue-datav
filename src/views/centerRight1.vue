@@ -10,7 +10,7 @@
         </div>
       </div>
       <div class="d-flex jc-center body-box">
-        <dv-scroll-board class="dv-scr-board" :config="config" />
+        <dv-scroll-board class="dv-scr-board" :config="config"/>
       </div>
     </div>
   </div>
@@ -21,18 +21,23 @@ export default {
   data() {
     return {
       config: {
-        header: ['UAV','坐标(m)', '加速度(m/s)', '高度(m)'],
+        header: ['UAV', '坐标(m)', '加速度(m/s)', '高度(m)'],
         data: [
-          ['UAV1', '(1,2,3)','(0.5,0.5,0.5)', "<span  class='colorGrass'>↑5</span>"],
-          ['UAV2', '(3,3,3)','(0,1,1)', "<span  class='colorRed'>↓3</span>"],
-          ['UAV3', '(3,2,3)','(0.4,0.5,0.5)', "<span  class='colorGrass'>↑10</span>"],
-          ['UAV4', '(1,1,1)','(0.5,0.5,0.5)', "<span  class='colorGrass'>↑9</span>"],
-          ['UAV5', '(2,1,1)','(0.5,0.5,0.5)', "<span  class='colorGrass'>↑9</span>"],
-          ['UAV6', '(3,3,2)','(0.5,0.5,0.5)', "<span  class='colorGrass'>↑6</span>"],
-          ['UAV7', '(4,3,1)','(0.5,0.5,0.5)', "<span  class='colorGrass'>↑8</span>"],
-          ['UAV8', '(3,3,3)','(0.5,0.5,0.5)', "<span  class='colorRed'>↓4</span>"],
-          ['UAV9', '(1,2,1)','(0.5,0.5,0.5)', "<span  class='colorRed'>↓1</span>"],
-          ['UAV10', '(2,2,3)','(0.5,0.5,0.5)', "<span  class='colorGrass'>↑7</span>"]
+          ['UAV1', '(0,0,2)', '(0,0,9.8)', 2],
+          ['UAV2', '(2.02,0,2.1)', '(0,0,9.7)', 2.1],
+          ['UAV3', '(0,2,2)', '(0,0,9.8)', 2],
+          ['UAV4', '(-2,0,1.9)', '(0,0,9.9)', 1.9],
+          ['UAV5', '(0,-2,2)', '(0,0,9.8)', 2],
+          ['UAV1', '(0.02,0.01,2)', '(0,0,9.8)', 2],
+          ['UAV2', '(1.95,0,2.05)', '(0,0,9.7)', 2.05],
+          ['UAV3', '(0,2,2)', '(0,0,9.8)', 2],
+          ['UAV4', '(-2,0,1.9)', '(0,0,9.9)', 1.9],
+          ['UAV5', '(0,-2,2)', '(0,0,9.8)', 2],
+          ['UAV1', '(-0.02,0,2)', '(0,0,9.8)', 2],
+          ['UAV2', '(2.03,0,2.1)', '(0,0,9.7)', 2.1],
+          ['UAV3', '(0,2,2)', '(0,0,9.8)', 2],
+          ['UAV4', '(-2,0,1.9)', '(0,0,9.9)', 1.9],
+          ['UAV5', '(0,-2,2)', '(0,0,9.8)', 2]
         ],
         rowNum: 7, //表格行数
         headerHeight: 35,
@@ -40,13 +45,14 @@ export default {
         oddRowBGC: '#0f1325', //奇数行
         evenRowBGC: '#171c33', //偶数行
         index: true,
-        columnWidth: [50],
+        columnWidth: [65],
         align: ['center']
       }
     }
   },
   components: {},
-  mounted() {},
+  mounted() {
+  },
   methods: {}
 }
 </script>
@@ -60,16 +66,20 @@ $box-width: 100%;
   height: $box-height;
   width: $box-width;
   border-radius: 5px;
+
   .bg-color-black {
     height: $box-height - 30px;
     border-radius: 10px;
   }
+
   .text {
     color: #c3cbde;
   }
+
   .body-box {
     border-radius: 10px;
     overflow: hidden;
+
     .dv-scr-board {
       width: 470px;
       height: 340px;
