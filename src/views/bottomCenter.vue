@@ -6,21 +6,21 @@
           <icon name="chart-bar" class="text-icon"></icon>
         </span>
         <div class="d-flex">
-          <span class="fs-xl text mx-2">通信延迟(ms)</span>
+          <span class="fs-xl text mx-2">数据量(KB/S)</span>
         </div>
       </div>
       <div>
-        <BottomLeftChart />
+        <BottomCenterChart />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import BottomLeftChart from '@/components/echart/bottom/bottomLeftChart'
+import BottomCenterChart from '@/components/echart/bottom/bottomCenterChart'
 export default {
   components: {
-    BottomLeftChart
+    BottomCenterChart
   }
 }
 </script>

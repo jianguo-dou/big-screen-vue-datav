@@ -79,8 +79,11 @@
 
           <!-- 第四行数据 -->
           <div class="bototm-box">
-            <dv-border-box-13>
+            <dv-border-box-12>
               <bottomLeft />
+            </dv-border-box-12>
+            <dv-border-box-13>
+              <bottomCenter />
             </dv-border-box-13>
             <dv-border-box-12>
               <bottomRight />
@@ -101,6 +104,7 @@ import centerRight1 from './centerRight1'
 // import centerRight2 from './centerRight2'
 import center from './center'
 import bottomLeft from './bottomLeft'
+import bottomCenter from './bottomCenter'
 import bottomRight from './bottomRight'
 
 export default {
@@ -122,6 +126,7 @@ export default {
     // centerRight2,
     center,
     bottomLeft,
+    bottomCenter,
     bottomRight
   },
   mounted() {

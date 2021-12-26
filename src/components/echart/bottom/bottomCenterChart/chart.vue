@@ -1,0 +1,182 @@
+<template>
+  <div>
+    <!-- 年度开工率 -->
+    <Echart
+        :options="options"
+        id="bottomCenterChart"
+        height="480px"
+        width="100%"
+    ></Echart>
+  </div>
+</template>
+
+<script>
+import Echart from '@/common/echart'
+
+export default {
+  data() {
+    return {
+      options: {},
+    };
+  },
+  components: {
+    Echart,
+  },
+  props: {
+    cdata: {
+      type: Object,
+      default: () => ({})
+    },
+  },
+  watch: {
+    cdata: {
+      handler(newData) {
+        this.options = {
+          title: {
+            text: "",
+          },
+          tooltip: {
+            trigger: "axis",
+            backgroundColor: "rgba(255,255,255,0.1)",
+            axisPointer: {
+              type: "shadow",
+              label: {
+                show: true,
+                backgroundColor: "#7B7DDC"
+              }
+            }
+          },
+          legend: {
+            // data: ["已贯通", "计划贯通", "贯通率"],
+            data: ["UAV1", "UAV2", "UAV3", "UAV4", "UAV5"],
+            textStyle: {
+              color: "#B4B4B4"
+            },
+            top: "0%"
+          },
+          grid: {
+            x: "8%",
+            width: "88%",
+            y: "4%"
+          },
+          xAxis: {
+            data: newData.category,
+            axisLine: {
+              lineStyle: {
+                color: "#B4B4B4"
+              }
+            },
+            axisTick: {
+              show: false
+            }
+          },
+          yAxis: [
+            {
+              splitLine: {show: false},
+              axisLine: {
+                lineStyle: {
+                  color: "#B4B4B4"
+                }
+              },
+
+              axisLabel: {
+                formatter: "{value} "
+              }
+            },
+            {
+              splitLine: {show: false},
+              axisLine: {
+                lineStyle: {
+                  color: "#B4B4B4"
+                }
+              },
+              axisLabel: {
+                formatter: "{value} "
+              }
+            }
+          ],
+          series: [
+            {
+              name: "UAV1",
+              type: "line",
+              smooth: false,
+              showAllSymbol: true,
+              symbol: "emptyCircle",
+              symbolSize: 8,
+              yAxisIndex: 0,
+              itemStyle: {
+                normal: {
+                  color: "rgb(128, 255, 165)"
+                }
+              },
+              data: newData.uav1
+            },
+            {
+              name: "UAV2",
+              type: "line",
+              smooth: false,
+              showAllSymbol: true,
+              symbol: "emptyCircle",
+              symbolSize: 8,
+              yAxisIndex: 0,
+              itemStyle: {
+                normal: {
+                  color: "rgb(0, 221, 255)"
+                }
+              },
+              data: newData.uav2
+            },
+            {
+              name: "UAV3",
+              type: "line",
+              smooth: false,
+              showAllSymbol: true,
+              symbol: "emptyCircle",
+              symbolSize: 8,
+              yAxisIndex: 0,
+              itemStyle: {
+                normal: {
+                  color: "rgb(55, 162, 255)"
+                }
+              },
+              data: newData.uav3
+            },
+            {
+              name: "UAV4",
+              type: "line",
+              smooth: false,
+              showAllSymbol: true,
+              symbol: "emptyCircle",
+              symbolSize: 8,
+              yAxisIndex: 0,
+              itemStyle: {
+                normal: {
+                  color: "rgb(255, 0, 135)"
+                }
+              },
+              data: newData.uav4
+            },
+            {
+              name: "UAV5",
+              type: "line",
+              smooth: false,
+              showAllSymbol: true,
+              symbol: "emptyCircle",
+              symbolSize: 8,
+              yAxisIndex: 0,
+              itemStyle: {
+                normal: {
+                  color: "rgb(255, 191, 0)"
+                }
+              },
+              data: newData.uav5
+            }
+          ]
+        }
+      },
+      immediate: true,
+      deep: true
+    },
+  },
+}
+</script>
