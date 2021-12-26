@@ -68,6 +68,64 @@ a {
   background-color: #1a5cd7;
 }
 
+//飞行状态
+.fly-status-working {
+  background-color: #3D9970;
+  color: #3D9970;
+  &:hover {
+    color: #111111;
+  }
+}
+
+.fly-status-unkownError {
+  background-color: #FFDC00;
+  color: #FFDC00;
+  &:hover {
+    color: #111111;
+  }
+}
+
+.fly-status-lowBattery {
+  background-color: #FF4136;
+  color: #FF4136;
+  &:hover {
+    color: #111111;
+  }
+}
+
+.fly-status-failure {
+  background-color: #85144B;
+  color: #85144B;
+  &:hover {
+    color: #DDDDDD;
+  }
+}
+
+//通信质量
+.com-quality-excellent {
+  background-color: #3D9970;
+  color: #3D9970;
+  &:hover {
+    color: #111111;
+  }
+}
+
+.com-quality-good {
+  background-color: #FFDC00;
+  color: #FFDC00;
+  &:hover {
+    color: #111111;
+  }
+}
+
+.com-quality-bad {
+  background-color: #FF4136;
+  color: #FF4136;
+  &:hover {
+    color: #111111;
+  }
+}
+
 .colorBlack {
   color: #272727 !important;
 
