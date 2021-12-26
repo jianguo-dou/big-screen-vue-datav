@@ -10,24 +10,17 @@
         </div>
       </div>
       <div>
-<!--        <BottomLeftChart />-->
-        <BottomAreaChart />
+        <BottomLeftChart />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-// import BottomLeftChart from '@/components/echart/bottom/bottomLeftChart'
-// export default {
-//   components: {
-//     BottomLeftChart
-//   }
-// }
-import BottomAreaChart from '@/components/echart/bottom/bottomAreaChart'
+import BottomLeftChart from '@/components/echart/bottom/bottomLeftChart'
 export default {
   components: {
-    BottomAreaChart
+    BottomLeftChart
   }
 }
 </script>

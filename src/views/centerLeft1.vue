@@ -29,8 +29,8 @@
         </div>
         <div
             class="item-box mt-2"
-            v-for="(item, index) in numberData"
-            :key="index"
+            v-for="(item, index2) in numberData"
+            :key="index2"
         >
           <div class="d-flex">
             <p class="text" style="text-align: center;">
@@ -128,8 +128,8 @@ export default {
       }, 3000)
     },
     changeNumber() {
-      this.numberData.forEach((item, index) => {
-        item.number.number[0] += ++index
+      this.numberData.forEach((item, index2) => {
+        item.number.number[0] += ++index2
         item.number = {...item.number}
       })
     }
