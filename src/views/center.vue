@@ -16,13 +16,13 @@
       </div>
     </div>
     <div class="down">
-      <div class="ranking bg-color-black">
-        <span>
-          <icon name="chart-pie" class="text-icon"></icon>
-        </span>
-        <span class="fs-xl text mx-2 mb-1 pl-3">年度负责人组件达标榜</span>
-        <dv-scroll-ranking-board class="dv-scr-rank-board mt-1" :config="ranking" />
-      </div>
+<!--      <div class="ranking bg-color-black">-->
+<!--        <span>-->
+<!--          <icon name="chart-pie" class="text-icon"></icon>-->
+<!--        </span>-->
+<!--        <span class="fs-xl text mx-2 mb-1 pl-3">年度负责人组件达标榜</span>-->
+<!--        <dv-scroll-ranking-board class="dv-scr-rank-board mt-1" :config="ranking" />-->
+<!--      </div>-->
       <div class="percent">
         <div class="item bg-color-black">
           <span>今日任务通过率</span>
@@ -250,15 +250,15 @@ export default {
     .bg-color-black {
       border-radius: 5px;
     }
-    .ranking {
-      padding: 10px;
-      width: 59%;
-      .dv-scr-rank-board {
-        height: 225px;
-      }
-    }
+    //.ranking {
+    //  padding: 10px;
+    //  width: 59%;
+    //  .dv-scr-rank-board {
+    //    height: 225px;
+    //  }
+    //}
     .percent {
-      width: 40%;
+      width: 100%;
       display: flex;
       flex-wrap: wrap;
       .item {
