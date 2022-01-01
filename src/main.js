@@ -21,6 +21,9 @@ import echarts from 'echarts'
 //import * as echarts from 'echarts'
 Vue.prototype.$echarts = echarts
 Vue.config.productionTip = false;
+// 调接口相当于ajax
+import axios from 'axios' //导入axios
+Vue.prototype.$axios = axios //修改原始数据
 
 // 全局注册
 Vue.component('icon', Icon);
