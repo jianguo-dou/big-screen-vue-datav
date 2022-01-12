@@ -64,7 +64,8 @@
             </div>
             <!-- 中间 -->
             <div>
-              <center />
+<!--              <center />-->
+              <uav-player/>
             </div>
             <!-- 中间 -->
 <!--            <div>-->
@@ -102,10 +103,11 @@ import centerLeft1 from './centerLeft1'
 import centerLeft2 from './centerLeft2'
 import centerRight1 from './centerRight1'
 // import centerRight2 from './centerRight2'
-import center from './center'
+// import center from './center'
 import bottomLeft from './bottomLeft'
 import bottomCenter from './bottomCenter'
 import bottomRight from './bottomRight'
+import UavPlayer from "@/views/uavPlayer";
 
 export default {
   mixins: [ drawMixin ],
@@ -120,11 +122,12 @@ export default {
     }
   },
   components: {
+    UavPlayer,
     centerLeft1,
     centerLeft2,
     centerRight1,
     // centerRight2,
-    center,
+    // center,
     bottomLeft,
     bottomCenter,
     bottomRight

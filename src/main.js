@@ -25,6 +25,11 @@ Vue.config.productionTip = false;
 import axios from 'axios' //导入axios
 Vue.prototype.$axios = axios //修改原始数据
 
+import VideoPlayer from 'vue-video-player'
+require('video.js/dist/video-js.css')
+require('vue-video-player/src/custom-theme.css')
+Vue.use(VideoPlayer)
+
 // 全局注册
 Vue.component('icon', Icon);
 Vue.use(dataV);
